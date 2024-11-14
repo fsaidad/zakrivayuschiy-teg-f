@@ -17,4 +17,395 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-text);
+  color: var(--main__text-color);
+  background-color: var(--background-color);
+  background-image: repeating-linear-gradient(
+      -90deg,
+      var(--gradient-color) 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+      0,
+      var(--gradient-color) 0 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(
+      to bottom,
+      var(--gradient-start-color),
+      var(--gradient-end-color)
+    );
+  background-size: cover;
+  padding: 0 calc(23.125rem - clamp(0rem, 31.2676rem + -34.7418vw, 23.125rem)) 0;
+}
+
+.header {
+  background-color: var(--background-color);
+  font-family: var(--accent-text);
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid var(--main__text-color);
+  margin: 100px 0 100px;
+}
+.heading {
+  font-size: calc(
+    7.1259999999999994rem - clamp(3.063rem, 4.4151rem + -1.5023vw, 4.063rem)
+  );
+  margin: calc(16rem - clamp(7.5rem, 8.8521rem + -1.5023vw, 8.5rem)) 0 20px;
+}
+.header-text {
+  margin-block-end: 25px;
+  font-size: calc(
+    2.3129999999999997rem - clamp(0.875rem, 1.6362rem + -0.8458vw, 1.438rem)
+  );
+}
+.theme-menu {
+  display: flex;
+  justify-content: center;
+  margin-block-end: 11px;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: lowercase;
+  margin-inline-start: 15px;
+}
+.theme-menu__list {
+  text-align: start;
+}
+.theme-menu__button {
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  position: relative;
+  margin-block-end: 8px;
+}
+.theme-menu__button:hover {
+  opacity: 0.6;
+  transition: 0.3s;
+  transition-timing-function: ease;
+  cursor: pointer;
+}
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  inset-inline-start: -14px;
+  animation: point 0.5s infinite ease-in-out alternate;
+}
+@keyframes point {
+  from {
+    left: -14px;
+  }
+  to {
+    left: -10px;
+  }
+}
+.theme-menu__button::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  margin-top: 2px;
+  background-color: var(--main__text-color);
+  transition: width 0.3s;
+  transition-timing-function: ease;
+}
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
+}
+.theme-menu__button:focus-visible::after {
+  outline: none;
+  width: 100%;
+}
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+}
+.section {
+  background-color: var(--background-color);
+  border: 2px solid var(--main__text-color);
+  margin-block-end: 50px;
+}
+.main-header {
+  font-weight: var(--heading-text);
+  margin: 6.5px 3px 3px 10px;
+  font-size: 18px;
+}
+.image {
+  inline-size: 100%;
+  border-block-start: 2px solid var(--main__text-color);
+  border-block-end: 2px solid var(--main__text-color);
+}
+.main-watermark {
+  z-index: 2;
+  position: absolute;
+  top: 27px;
+  right: calc(2.251rem - clamp(0.688rem, 1.8711rem + -1.3146vw, 1.563rem));
+  font-size: 14px;
+  font-family: var(--accent-text);
+  mix-blend-mode: hard-light;
+  opacity: 50%;
+  text-shadow: 1px 1px var(--shadow-color), -1px -1px var(--shadow-color),
+    -1px 1px var(--shadow-color), 1px -1px var(--shadow-color),
+    0 1px var(--shadow-color), 1px 0 var(--shadow-color),
+    -1px 0 var(--shadow-color), 0 -1px var(--shadow-color);
+}
+.main__image-position {
+  position: relative;
+}
+.main-paragraphs {
+  padding: 22.3px 25px 26px 25px;
+  font-size: 18px;
+  font-weight: var(--paragraph-text);
+}
+.main__paragraphs-text {
+  margin-block-end: 27px;
+}
+
+.card__like-button {
+  margin-block-start: 25px;
+  background-color: transparent;
+  border: 2px solid var(--main__text-color);
+  font-size: 14px;
+  font-family: var(--accent-text);
+  min-inline-size: 130px;
+}
+.card__like-button:focus {
+  outline: none;
+}
+.button-position {
+  display: flex;
+  justify-content: end;
+}
+.card__icon-button {
+  background-color: transparent;
+  border: 2px solid transparent;
+  margin-block-start: 25px;
+  padding: 0;
+  margin-inline-end: 4px;
+  block-size: 36px;
+  cursor: pointer;
+}
+.card__icon-button:focus {
+  outline: none;
+}
+.card__icon-button:focus-visible {
+  border-color: var(--main__text-color);
+  transition: 0.3s;
+}
+.core {
+  fill: transparent;
+  transition: fill 0.3s 0.03s;
+}
+.main-body {
+  fill: transparent;
+  transition: fill linear 0.3s;
+}
+.contour {
+  fill: var(--heart-countur-color);
+  transition: fill linear 0.3s 0.06s;
+}
+.heart:hover .core {
+  fill: var(--main__text-color);
+  transition: fill linear 0.3s;
+}
+.heart:hover .main-body {
+  fill: var(--main__text-color);
+  transition: fill linear 0.3s 0.05s;
+}
+.heart:active .core {
+  fill: var(--heart-color);
+  transition: fill linear 0.3s;
+}
+.heart:active .main-body {
+  fill: var(--heart-color);
+  transition: fill linear 0.3s 0.05s;
+}
+.like-icon.is-liked .core {
+  fill: var(--heart-color);
+  transition: fill linear;
+}
+.like-icon.is-liked .main-body {
+  fill: var(--heart-color);
+  transition: fill linear 0.3s 0.05s;
+}
+.like-icon.is-liked .contour {
+  fill: var(--heart-color);
+  transition: fill linear 0.1s;
+}
+.like-icon.is-liked .heart {
+  animation: heart 0.3s ease-in alternate 0.1s;
+  transform-origin: center;
+}
+@keyframes heart {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+.sparks {
+  opacity: 0;
+}
+.like-icon.is-liked .sparks {
+  opacity: 0;
+  animation: sparks 0.3s ease-in alternate 0.3s;
+}
+@keyframes sparks {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+.footer-button {
+  background-color: var(--background-color);
+  border: 2px solid var(--main__text-color);
+  margin-block-end: 100px;
+  padding: 15px 20px;
+  font-size: 14px;
+  font-family: var(--accent-text);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.button {
+  position: relative;
+  color: var(--button-text-color);
+  cursor: pointer;
+}
+.button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--main__text-color);
+  transition: 0.3s;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--main__text-color);
+  transition: width 0.5s ease-in-out;
+}
+.button:hover::after {
+  width: 100%;
+}
+.button__text {
+  mix-blend-mode: difference;
+  position: relative;
+  z-index: 1;
+}
+.floppy {
+  fill: var(--button-text-color);
+}
+.dialog {
+  background-color: var(--background-color);
+  padding: 30px clamp(1.875rem, 2.8891rem + -1.1268vw, 2.385rem);
+  border: 2px solid var(--main__text-color);
+  inline-size: calc(
+    43.626rem - clamp(21.313rem, 22.6651rem + -1.5023vw, 22.313rem)
+  );
+}
+.dialog .floppy {
+  fill: var(--main__text-color);
+  width: 39px;
+  height: 39px;
+}
+.dialog__button {
+  background-color: transparent;
+  border: 2px solid var(--main__text-color);
+  font-size: 14px;
+  font-family: var(--accent-text);
+  color: var(--button-text-color);
+  inline-size: 100%;
+  padding: 9px 0;
+  margin-block-start: 30px;
+  cursor: pointer;
+}
+.dialog__button:focus {
+  outline: none;
+}
+.dialog__button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--main__text-color);
+}
+.dialog-text {
+  font-size: 14px;
+  font-family: var(--accent-text);
+  color: var(--main__text-color);
+  text-transform: uppercase;
+  line-height: 21px;
+}
+.dialog-position {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+}
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.image__filter-first {
+  filter: grayscale(100%);
+}
+.image__filter-two {
+  filter: brightness(20%);
+}
+.image__filter-three {
+  filter: saturate(200%);
+}
+.image__filter-four {
+  filter: blur(10px) saturate(300%);
+}
+.image__filter-five {
+  filter: hue-rotate(0.4turn);
+}
+.image__filter-six {
+  filter: blur(2px) grayscale(200%);
+}
+.image__filter-seven {
+  filter: opacity(60%);
+}
+@media (width <= 375px) {
+  .header {
+    inline-size: 100%;
+  }
+  .page {
+    padding: 0;
+  }
+  .main {
+    inline-size: 100%;
+  }
+  .footer-button {
+    inline-size: 83%;
+    display: block;
+  }
+  .button__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .heading {
+    font-size: calc(
+      5.063000000000001rem - clamp(2rem, 9.2477rem + -30.9236vw, 3.063rem)
+    );
+  }
+  .floppy {
+    width: 28px;
+    height: 28px;
+    margin-block-end: 10px;
+  }
 }

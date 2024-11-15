@@ -6,9 +6,9 @@
   --gradient-color: #d3d3d3;
   --gradient-start-color: #e7e7e7;
   --gradient-end-color: #1a1a1a;
-  --accent-text: "PressStart2P-Regular", sans-serif;
-  --heading-text: 700;
-  --paragraph-text: 400;
+  --accent-text: "PressStart2P", sans-serif;
+  --wght: 700;
+  --wght-p: 400;
   --shadow-color: #ffffff;
   --button-text-color: #ffffff;
   --heart-countur-color: #000000;

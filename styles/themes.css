@@ -10,8 +10,8 @@
   --gradient-color: #000;
   --gradient-start-color: #007f0c;
   --gradient-end-color: #004306;
-  --heading-text: 785;
-  --paragraph-text: 465;
+  --wght: 785;
+  --wght-p: 465;
   --shadow-color: #000000;
   --button-text-color: #00cc14;
   --heart-countur-color: #00cc14;
@@ -24,8 +24,8 @@
     --gradient-color: #000;
     --gradient-start-color: #007f0c;
     --gradient-end-color: #004306;
-    --heading-text: 785;
-    --paragraph-text: 465;
+    --wght: 785;
+    --wght-p: 465;
     --shadow-color: #000000;
     --button-text-color: #00cc14;
     --heart-countur-color: #00cc14;
@@ -38,8 +38,8 @@
   --gradient-color: #d3d3d3;
   --gradient-start-color: #e7e7e7;
   --gradient-end-color: #1a1a1a;
-  --heading-text: 700;
-  --paragraph-text: 400;
+  --wght: 700;
+  --wght-p: 400;
   --shadow-color: #ffffff;
   --button-text-color: #ffffff;
   --heart-countur-color: #000000;

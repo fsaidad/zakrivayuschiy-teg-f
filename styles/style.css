@@ -273,7 +273,7 @@
   position: relative;
   color: var(--button-text-color);
   cursor: pointer;
-  transition: 0.3s;
+  transition: box-shadow 0.3s;
 }
 .button:focus {
   outline: none;

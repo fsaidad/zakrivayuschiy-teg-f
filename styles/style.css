@@ -273,11 +273,11 @@
   position: relative;
   color: var(--button-text-color);
   cursor: pointer;
+  transition: 0.3s;
 }
 .button:focus {
   outline: none;
   box-shadow: 2px 2px 0 var(--main__text-color);
-  transition: 0.3s;
 }
 .button::after {
   content: "";
@@ -289,7 +289,10 @@
   transform-origin: 0;
   transform: scaleX(0);
   background-color: var(--main__text-color);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out; /*оно работает плавно(наведитесь пожалуйста на кнопку),
+  это анимация для ховера и задана основному селектору, тоесть псевдоэлементу ::after,
+   может быть вы имели ввиду .button:focus ,
+  его я исправил*/
 }
 .button:hover::after {
   transform: scaleX(1);
